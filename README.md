@@ -5,11 +5,13 @@ LaTeX is a high-quality typesetting system; it includes features designed for th
 
 ## Installation
 
-Use ... to install ...
+LaTeX is not a stand-alone typesetting program in itself, but a document preparation software that runs on top of TEX.
+LaTeX is distributed through CTAN servers or comes as part of many easily installable and usable TeX distributions provided by TeX User Group (TUG) - like [TEX Live](https://www.tug.org/texlive/), and [Mik TEX](https://miktex.org/).
+For more distributions visit http://www.tug.org/interest.html#free .
 
-```bash
-pip install foobar
-```
+It is also possible to use online service like [Overleaf](https://www.overleaf.com/) and [Papeeria](https://www.papeeria.com/). 
+
+For more information and directions please visit https://www.latex-project.org/get/ .
 
 ## Usage
 
@@ -22,7 +24,7 @@ import ulem # NOTE the ulem package changes the behaviour of \emph{} to underlin
 \del{} # strike-through text.
 \sectionInput{} # shortcut to the 'Section' folder.
 \singfig{}{}{}{}{} # a short way to present a display picture. The input parameters are: image_name, placement, height, width, caption. The label is set as fig:image_name.
-\singfig{}{}{}{}{}{}{}{} # a short way to present 2 figures next to each other. The input parameters are: placement of duo, minipage width, first image_name, width within minipage for first image, caption of first image, second image_name, width within minipage for second image, caption of second image. The labels are set as the image names fig:first/second image_name
+\doublefig{}{}{}{}{}{}{}{} # a short way to present 2 figures next to each other. The input parameters are: placement of duo, minipage width, first image_name, width within minipage for first image, caption of first image, second image_name, width within minipage for second image, caption of second image. The labels are set as the image names fig:first/second image_name
 ```
 
 ## Contributing
