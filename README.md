@@ -6,12 +6,16 @@ LaTeX is a high-quality typesetting system; it includes features designed for th
 ## Installation
 
 LaTeX is not a stand-alone typesetting program in itself, but a document preparation software that runs on top of TEX.
-LaTeX is distributed through CTAN servers or comes as part of many easily installable and usable TeX distributions provided by TeX User Group (TUG) - like [TEX Live](https://www.tug.org/texlive/), and [Mik TEX](https://miktex.org/).
+LaTeX is distributed through CTAN servers or comes as part of many easily installable and usable TeX distributions provided by TeX User Group (TUG)
+like [TEX Live](https://www.tug.org/texlive/), and [Mik TEX](https://miktex.org/).
 For more distributions visit http://www.tug.org/interest.html#free .
 
 It is also possible to use online service like [Overleaf](https://www.overleaf.com/) and [Papeeria](https://www.papeeria.com/). 
 
 For more information and directions please visit https://www.latex-project.org/get/ .
+
+To use the template download/clone the entire parent folder 'Template' and open it as a new project in your prefered TEX distribution.
+A good idea would be to save the template as a seperate project, duplicate it, and work on the duplications as specific projects according to need.
 
 ## Usage
 
@@ -31,4 +35,4 @@ import ulem # NOTE the ulem package changes the behaviour of \emph{} to underlin
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
