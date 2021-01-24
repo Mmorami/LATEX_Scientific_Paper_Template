@@ -33,6 +33,7 @@ import ulem # NOTE the ulem package changes the behaviour of \emph{} to underlin
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Any improvement should be saved as a new version, with documentation on changes and improvements from previous version.
 
 ## License
 [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
