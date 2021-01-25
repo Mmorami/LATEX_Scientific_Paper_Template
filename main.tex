@@ -1,0 +1,169 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page sizes and geometry
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{geometry} %Add [showframe] to graphically see the borders of the page - header, body, footer, etc...
+ \geometry{
+ a4paper,
+ total={170mm,237mm}, % total={width, height}
+ left=20mm,
+ top=20mm,
+ lmargin=0.5in, % Left margin
+ rmargin=0.5in, % Right margin
+ }
+ \setlength{\headheight}{30mm} %Sets the height of the section titles which are not include in the noraml body frame
+ \raggedbottom %Makes all pages the height of the text on that page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fancy Header & Foot specification
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr} %Format options for fancy header & footer
+ \fancypagestyle{plain}{
+    \lhead{}
+    \chead{More details (uni, faculty, adress, etc.)\\
+    \includegraphics[height=1.2cm]{Images/logo-here.png}}
+    \rhead{}
+    %\cfoot{\thepage \hspace{1pt}}
+    \fancyfoot[C]{\thepage \hspace{1pt}}
+ }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{authblk} %Allows relating affiliation to author and multipule authors
+\usepackage[hidelinks]{hyperref} %Makes a clickable TOC
+\usepackage{indentfirst} %Idents each paragraph in the body of the text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Setting the numbering preferences of equation, figures and tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath} %Open math formats including numbering, multiline, special chars, etc..
+ \numberwithin{equation}{section} % number equations by section numbers - 1.1, 1.2, 2.1, 2.2 etc...
+ \numberwithin{figure}{section} % number figures by section numbers - 1.1, 1.2, 2.1, 2.2 etc...
+ \numberwithin{table}{section} % number tables by section numbers - 1.1, 1.2, 2.1, 2.2 etc...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Color specific parts to notice later
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{color} %Enables color package for text and background
+\newcommand{\hh}[1]{\color{red}{#1} \color{black}} %Colors a specific part in red and makes sure the rest of the text keep writing in black
+\newcommand{\im}[1]{\color{green}{#1} \color{black}} %Colors a specific part in red and makes sure the rest of the text keep writing in black
+%\newcommand{\sh}[1]{\\ ***\color{blue}{#1} \color{black}\\} % Colors a specific part in blue and makes sure the rest of the text keep writing in black - SHIRAN'S COMMENTS
+
+%\usepackage{ulem} %Enables graphical text manipulations - strikethrugh etc...
+%\newcommand{\del}[1]{\sout{{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figures packages & implementation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{easyfig} %Handles images.
+\usepackage[labelfont=bf, font=footnotesize]{caption} %Captions - labelfond BOLD
+
+} %Sets a single image with parameters as follows: image name, placement, height, width, caption
+\newcommand{\singfig}[5]{
+\Figure[placement=#2, height=#3\linewidth, width=#4\linewidth, caption=#5, label={fig:#1}]{Images/#1}
+
+} %Sets a double image with parameters as follows: placement of duo, minipage width, first image_name, width within minipage for first image, caption of first image, second image_name, width within minipage for second image, caption of second image.
+\newcommand{\doublefig}[8]{
+\begin{figure}[#1]
+    \centering
+    \begin{minipage}{#2\textwidth}
+        \centering
+        \includegraphics[width=#4\textwidth]{Images/#3}
+        \caption{#5}
+        \label{fig:#3}
+    \end{minipage}\hfill
+    \begin{minipage}{#2\textwidth}
+        \centering
+        \includegraphics[width=#7\textwidth]{Images/#6}
+        \caption{#8}
+        \label{fig:#6}
+    \end{minipage}
+\end{figure}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[capitalise,noabbrev]{cleveref} %Clever reference - auto ref equations - capitalize letters, noabbrev - full name - Eq -> Equation
+
+\usepackage{appendix} %Appendix formatting
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Creating shortcuts to the folders
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\sectionInput}[1] {
+  \input{Section/#1}
+}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\sectionInput{Title page}
+\newpage
+
+\tableofcontents
+\newpage
+
+\pagestyle{plain}
+\thispagestyle{fancy}
+
+\section{Introduction}\label{section:1}
+\sectionInput{1 - Introduction/Intro}
+
+\subsection{First Subject}\label{subsection:1.1}
+\sectionInput{1 - Introduction/FirstSub}
+
+\subsection{Second Subject}\label{subsection:1.2}
+\sectionInput{1 - Introduction/SecondSub}
+
+\subsection{Third Subject}\label{subsection:1.3}
+\sectionInput{1 - Introduction/ThirdSub}
+
+\section{Experimental}\label{section:2}
+\sectionInput{2 - Experimental Setup/IntroSetup}
+
+\subsection{Part1}\label{subsection:2.1}
+\sectionInput{2 - Experimental Setup/Part1}
+
+\subsection{Part2}\label{subsection:2.2}
+\sectionInput{2 - Experimental Setup/Part2}
+
+\section{Results}\label{section:3}
+\subsection{Experiment 1}\label{subsection:3.1}
+\sectionInput{3 - Results/Experiment1}
+
+\subsection{Experiment 2}\label{subsection:3.2}
+\sectionInput{3 - Results/Experiment2}
+
+\section{Discussion}\label{section:4}
+\sectionInput{4 - Discussion/Discussion}
+
+\section{Future Work}\label{section:5}
+\subsection{Idea1}\label{subsection:5.1}
+\sectionInput{5 - Future/Idea1}
+
+\subsection{Idea2}\label{subsection:5.2}
+\sectionInput{5 - Future/Idea2}
+
+\newpage
+\sectionInput{Bibliography}
+
+\newpage
+\appendix
+\section{Appendix}\label{section:6}
+\subsection{First}\label{App:1}
+\sectionInput{6 - Appendix/First}
+\clearpage
+
+\subsection{Second}\label{App:2}
+\sectionInput{6 - Appendix/Second}
+\clearpage
+
+\subsection{Third}\label{App:3}
+\sectionInput{6 - Appendix/Third}
+\clearpage
+
+
+\end{document}
