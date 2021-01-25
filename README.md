@@ -1,5 +1,5 @@
 # LaTeX Scientific Paper Template
-LaTeX is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation. LaTeX is the de facto standard for the communication and publication of scientific documents. This LaTeX template aim enhance the experience of groups collaborating on the same document(s). It include commands such as, striking-though text and adding comments in different color.
+LaTeX is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation. LaTeX is the de facto standard for the communication and publication of scientific documents. This LaTeX template aim to boost user productivity by supplying neat structure and design, and enhance the experience of groups collaborating on the same document(s). It include commands such as, striking-though text and adding comments in different color.
 
 [add gif here]
 
