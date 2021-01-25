@@ -14,7 +14,7 @@ It is also possible to use online service like [Overleaf](https://www.overleaf.c
 
 For more information and directions please visit https://www.latex-project.org/get/ .
 
-To use the template download/clone the entire parent folder 'Template' and open it as a new project in your prefered TEX distribution.
+To use the template download/clone the entire parent folder and open it as a new project in your prefered TEX distribution.
 A good idea would be to save the template as a seperate project, duplicate it, and work on the duplications as specific projects according to need.
 
 ## Usage
@@ -30,6 +30,8 @@ import ulem # NOTE the ulem package changes the behaviour of \emph{} to underlin
 \singfig{}{}{}{}{} # a short way to present a display picture. The input parameters are: image_name, placement, height, width, caption. The label is set as fig:image_name.
 \doublefig{}{}{}{}{}{}{}{} # a short way to present 2 figures next to each other. The input parameters are: placement of duo, minipage width, first image_name, width within minipage for first image, caption of first image, second image_name, width within minipage for second image, caption of second image. The labels are set as the image names fig:first/second image_name
 ```
+All of the above commands are defined in the 'main.TEX' relatively at the top.
+Note that some of the commands are commented by default. To use them Ctrl+F for the desired functionality and make sure to uncomment.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
